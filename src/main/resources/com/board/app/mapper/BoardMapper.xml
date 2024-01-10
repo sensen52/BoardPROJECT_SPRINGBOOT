@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.board.app.mapper.BoardMapper">
+<!--namespace: Mybatis가 매퍼파일의 내용을 인식하기 위함. 정의된 sql쿼리를 실제 자바 코드와 연결하여 실행될때 사용하고
+    일반적으로 매퍼파일과 매핑되는 자바인터페이스의 패키지 이름을 따온다-->
+
+<!-- resultType: 쿼리결과를 어떤 자바 객체로 매핑할 것인지 설정   -->
+
+    <!--CRUD-->
+    <insert id="create">
+    insert into tbl_board(title,content,writer,regdate,viewcnt)
+    values (title=#{title},content=#{content},writer=#{writer},Now(),0)
+    </insert>
+
+    <select id="read" resultType="BoardDto">
+    select bno,title,content,writer,regdate,viewcnt
+    from tbl_board
+    where bno =#{bno}
+    </select>
+
+    <update id="update">
+    update tbl_board
+    set title=#{title},content=#{content},writer=#{writer}
+    where bno = #{bno}
+    </update>
+
+    <delete id="delete">
+    delete
+    from tbl_board
+    where bno =#{bno}
+    </delete>
+
+    <select id="selectAll" resultType="BoardDto">
+     select bno,title,content,writer,regdate,viewcnt
+     from tbl_board
+    </select>
+</mapper>
+

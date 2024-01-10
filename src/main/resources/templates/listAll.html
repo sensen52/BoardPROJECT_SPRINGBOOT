@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>listAll</title>
+</head>
+<body>
+
+  <form action="regist" method="get">
+
+    <div th:block th:each="board:${list}">
+        <div th:text="${board.writer}"></div>
+    </div>
+  </form>
+</body>
+</html>
