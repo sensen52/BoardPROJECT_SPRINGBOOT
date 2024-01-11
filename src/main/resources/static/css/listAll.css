@@ -1,0 +1,18 @@
+table {
+    border: 1px solid #d2ebd9;
+    border-collapse: collapse;
+    width: 100vw;
+    height: 100px;
+    color: darkslategray;
+    font-size: 18px;
+}
+
+th {
+    height: 50px;
+    color: darkslategray;
+}
+
+a:hover {
+    color: #2a763d;
+    font-weight: bold;
+}

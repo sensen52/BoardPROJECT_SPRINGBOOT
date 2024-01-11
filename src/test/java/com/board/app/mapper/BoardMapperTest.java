@@ -1,10 +1,10 @@
-package com.board.app;
+package com.board.app.mapper;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BoardApplicationTests {
+class BoardMapperTest {
 
     @Test
     void contextLoads() {

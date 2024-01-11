@@ -3,14 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>listAll</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/listAll.css}">
 </head>
 <body>
+<form>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>타이틀</th>
+            <th>내용</th>
+            <th>글쓴이</th>
+            <th>일자</th>
+            <th>조회수</th>
+        </tr>
+        </thead>
 
-  <form action="regist" method="get">
+        <tbody>
+        <tr th:each="lists:${list}">
+            <td th:text="${lists.bno}"></td>
+            <td>
+                <a th:href="@{/read(bno=${lists.bno})}" th:text="${lists.title}"></a>
+            </td>
+            <td th:text="${lists.content}"></td>
+            <td th:text="${lists.writer}"></td>
+            <td th:text="${lists.regdate}"></td>
+            <td th:text="${lists.viewcnt}"></td>
+        </tr>
+        </tbody>
 
-    <div th:block th:each="board:${list}">
-        <div th:text="${board.writer}"></div>
-    </div>
-  </form>
+    </table>
+</form>
+
 </body>
 </html>

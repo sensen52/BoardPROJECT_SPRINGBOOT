@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>read</title>
+</head>
+<body>
+    <div>
+        <label for="bno">글 번호</label>
+        <input id="bno" type="text" th:value="${board.bno}" readonly/>
+    </div>
+
+    <div>
+        <label for="title">글 제목</label>
+        <input id="title" type="text" th:value="${board.title}" readonly/>
+    </div>
+
+    <div>
+        <label for="writer">글쓴이</label>
+        <input id="writer" type="text" th:value="${board.writer}" readonly/>
+    </div>
+    <div>
+        <label for="content">내용</label>
+        <!--textarea는 여러 줄의 텍스트를 입력받는 입력란으로, 사용자가 입력한 텍스트에는 줄바꿈이나 다양한 형식의 HTML이 포함될 수 있다
+            그래서 th:utext(텍스트를 HTML로 변환하지 않고 그대로 출력)을 사용한다.-->
+        <textarea  id="content" readonly th:utext="${board.content}" ></textarea>
+    </div>
+</body>
+</html>

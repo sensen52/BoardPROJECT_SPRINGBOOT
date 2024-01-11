@@ -1,7 +1,10 @@
 springboot 게시판
 ---
-SpringBoot 3.2.0
-Gradle
-Mysql Server 
-MyBatis
+<div>SpringBoot 3.2.1</div>
+<div>MyBatis 3.0.3</div>
+<div>Gradle</div>
+<div>Mysql Server </div>
+
+
+
 
