@@ -5,24 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-<form method="post">
-    <div class="regist_form">
-        <p>
-            <label>제목</label><input type="text" name="title">
-        </p>
-        <p>
-            <label>작성자</label><input type="text" name="writer" size="15">
-        </p>
-        <div class="textarea_form">
-            <label>내용</label>
+<form action="/regist" method="post">
 
-            <textarea rows="15" cols="65" name="content"></textarea>
-
-        </div>
-        <p>
-            <button type="submit" class="regist_btn">등록</button>
-        </p>
+    <div>
+        <label for="title">글 제목</label>
+        <input id="title" type="text" name="title"/>
     </div>
+
+    <div>
+        <label for="writer">글쓴이</label>
+        <input id="writer" type="text" name="writer"/>
+    </div>
+    <div>
+        <label for="content">내용</label>
+        <textarea id="content" name="content"></textarea>
+    </div>
+    <button type="submit">등록하기</button>
+
 </form>
+
 </body>
 </html>

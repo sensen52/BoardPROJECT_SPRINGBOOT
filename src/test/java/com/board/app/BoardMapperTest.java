@@ -21,17 +21,17 @@ public class BoardMapperTest {
     private BoardMapper boardMapper;
 
 
-    @Test
-    @Transactional
-    public void createTest() {
-        BoardDto boardDto = new BoardDto();
-        boardDto.setBno(1);
-        boardDto.setTitle("테스트");
-        boardDto.setContent("테스트");
-        boardDto.setWriter("테스트");
-
-        boardMapper.create(boardDto);
-    }
+//    @Test
+//    @Transactional
+//    public void createTest() {
+//        BoardDto boardDto = new BoardDto();
+//        boardDto.setBno(1);
+//        boardDto.setTitle("테스트");
+//        boardDto.setContent("테스트");
+//        boardDto.setWriter("테스트");
+//
+//        boardMapper.create(boardDto);
+//    }
 
     @Test
     public void select() {

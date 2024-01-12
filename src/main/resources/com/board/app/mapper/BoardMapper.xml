@@ -9,7 +9,7 @@
     <!--CRUD-->
     <insert id="create">
     insert into tbl_board(title,content,writer,regdate,viewcnt)
-    values (title=#{title},content=#{content},writer=#{writer},Now(),0)
+    values (#{title},#{content},#{writer},Now(),0)
     </insert>
 
     <select id="read" resultType="BoardDto">
@@ -27,7 +27,7 @@
     <delete id="delete">
     delete
     from tbl_board
-    where bno =#{bno}
+    where bno = #{bno}
     </delete>
 
     <select id="selectAll" resultType="BoardDto">

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>modify</title>
+</head>
+<body>
+<form action="/modify" method="post">
+    <div>
+        <label for="bno">글 번호</label>
+        <input id="bno" type="text" th:value="${board.bno}" name="bno" readonly/>
+    </div>
+
+    <div>
+        <label for="title">글 제목</label>
+        <input id="title" type="text" th:value="${board.title}" name="title" />
+    </div>
+
+    <div>
+        <label for="writer">글쓴이</label>
+        <input id="writer" type="text" th:value="${board.writer}" name="writer" readonly/>
+    </div>
+    <div>
+        <label for="content">내용</label>
+
+        <textarea id="content" th:utext="${board.content}" name="content" ></textarea>
+    </div>
+
+    <button type="submit">수정완료</button>
+    <button type="submit" name="listAll" formaction="/listAll" formmethod="get"></button>
+
+
+</form>
+</body>
+</html>

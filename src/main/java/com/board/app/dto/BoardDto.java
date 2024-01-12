@@ -21,5 +21,8 @@ public class BoardDto {
     private String content;
     private String writer;
     private Date regdate;
-    private String viewcnt;
+    private int viewcnt;
+
+
+
 }
